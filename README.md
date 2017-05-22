@@ -29,11 +29,10 @@ Keep this limited to only 1-2 sentences. Don’t get yourself down a rabbit hole
 So we’ve  addressed the *why*. This section addresses the *how*. As in, how did you get this app off the ground? What were all the components you and your team used to bring your app to life?
 
 **This is where you get technical**.
-
-- Did you use Bootstrap for the front end? jQuery for a dynamic UI? Maybe Angular because you wanted a single page app?
-- Did you use Node/Express or Rack/Rails as your framework?
-- What database did you use? Postgres, Mongo, SQLite?
-- How did deploy the app? Heroku? Meteor?
+- What technologies did you use - AVFoundation, CoreLocation etc
+- Does your application use Firebase (or some other Backend-As-A-Service) or a JSON/XML Api
+- Did you create your views programmatically or in Storyboard
+- Did you use CoreData or Realm for persistent storage
 
 Remember the `Technical Experience/Applications Built` portion of your resume? You’ll want to summarize those bullet points with a high-level outline of the project without getting too fine-grain during this part of the conversation. That way, you leave room for questions when you ultimately dive deeper into all of your app’s features.
 
@@ -45,11 +44,8 @@ What can your app do? What makes it cool or unique? Be sure to elaborate on all 
 
 #### Examples:
 
-> Our app uses Nokogiri to scrape major news sites and aggregates the most popular titles.
-
-> Our app connects to all the major social networking APIs like Twitter and Pinterest to create a holistic profile of each user.
-
-> Our app uses ActionMailer to send emails every time a user subscribes.
+> Our app uses Firebase Database to provide real-time chat communication
+> Our app uses CoreData to save a user's places of interest to their device.
 
 If you collaborated on a team project, make sure you fully understand what features your partners built. Interviewers won’t always know what components you were responsible for so you want to be prepared for everything.
 
@@ -63,9 +59,9 @@ This is often the most interesting part of an interview. Interviewers, especiall
 
 #### Examples
 
-> Everything was going fine until we tried to load a 2GB file into the database. That’s when we realized SQLite couldn't handle the size and we had to migrate to AWS S3.
+> Everything was going fine until we tried to load a 1GB file into the app. That’s when we realized we could load the file's contents into CoreData when the app is first being initalized and then access the data much faster on subsequent loads.
 
-> We connected to Instagram’s API but noticed our app started freezing whenever we would listen for hashtag updates. Then we realized we were tracking worldwide hashtags and our app was getting pummeled with hundreds of messages each second. Thin, the default server for Rails is single-threaded and wasn’t able to handle the load. Thankfully we switched to Unicorn and overcame the concurrency issues.
+> We connected to Reddit’s API but noticed our app started freezing whenever we would request video links to be downloaded. Then we realized we needed to handle the API call and video download in the background and then when the video was ready to be played change the UI on the main thread.
 
 A few things to remember here:
 - Make sure to talk about actual **solutions**. Don’t bring up any hacks/workarounds that you know will ultimately break later. Make sure your solutions were thoughtful and airtight.
